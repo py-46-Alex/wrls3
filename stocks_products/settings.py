@@ -21,7 +21,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = ['9.6.5.4', '7.5.4.3', '*']
 
 
 # Application definition
@@ -75,9 +75,9 @@ WSGI_APPLICATION = 'stocks_products.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('BD_ENGINE'),
-        'NAME': os.getenv('BD_NAME'),
-        'HOST': os.getenv('ALLOWED_HOSTS'),
+        'ENGINE': os.getenv('DB_ENGINE'),
+        'NAME': os.getenv('DB_NAME'),
+        'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'), 'USER': os.getenv('DB_USER'), 'PASSWORD': os.getenv('DB_PASSWORD')
     }
 }
